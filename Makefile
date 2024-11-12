@@ -30,7 +30,8 @@ export XPKG_IGNORE
 
 X_EXAMPLES := $(shell find ./examples -path '*.yaml' | paste -s -d ',' - )
 
-CROSSPLANE_NAMESPACE = upbound-system
+CROSSPLANE_NAMESPACE = crossplane-system
+CROSSPLANE_VERSION = 1.18.0
 
 -include build/makelib/local.xpkg.mk
 -include build/makelib/controlplane.mk

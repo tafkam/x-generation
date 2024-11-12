@@ -22,7 +22,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: aws-creds
-  namespace: upbound-system
+  namespace: crossplane-system
 type: Opaque
 stringData:
   key: nocreds
@@ -38,7 +38,7 @@ spec:
   credentials:
     source: Secret
     secretRef:
-      namespace: upbound-system
+      namespace: crossplane-system
       name: aws-creds
       key: key
 EOF
@@ -48,7 +48,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: zpa-creds
-  namespace: upbound-system
+  namespace: crossplane-system
 type: Opaque
 stringData:
   key: nocreds
@@ -75,7 +75,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: offical-aws-creds
-  namespace: upbound-system
+  namespace: crossplane-system
 type: Opaque
 stringData:
   key: nocreds
@@ -91,7 +91,7 @@ spec:
   credentials:
     source: Secret
     secretRef:
-      namespace: upbound-system
+      namespace: crossplane-system
       name: offical-aws-creds
       key: key
 EOF
