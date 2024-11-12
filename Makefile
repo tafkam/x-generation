@@ -115,7 +115,7 @@ render:
 	    if [[ "$$COMPOSITION" == "null" || "$$FUNCTION" == "null" || "$$ENVIRONMENT" == "null" ]]; then \
 	        continue; \
 	    fi; \
-	    crossplane beta render $$file $$COMPOSITION $$FUNCTION -e $$ENVIRONMENT -x -r; \
+	    crossplane render $$file $$COMPOSITION $$FUNCTION -e $$ENVIRONMENT -x -r; \
 	done
 
 e2e: controlplane.up uptest
